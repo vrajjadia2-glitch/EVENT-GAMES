@@ -1,0 +1,147 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #0b0f14;
+  color: #00ffd5;
+  font-family: monospace;
+  text-align: center;
+}
+
+.screen {
+  display: none;
+  padding: 20px;
+}
+
+.screen.active {
+  display: block;
+}
+
+button {
+  padding: 12px;
+  margin: 8px;
+  width: 90%;
+  max-width: 300px;
+  background: #111;
+  color: #00ffd5;
+  border: 1px solid #00ffd5;
+  font-size: 16px;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+.teams, .modules {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.status p {
+  margin: 6px 0;
+}
+
+.password {
+  margin-top: 20px;
+}
+
+.digit {
+  font-size: 32px;
+  margin: 0 10px;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay.active {
+  display: flex;
+}
+
+.card {
+  border: 2px solid #00ffd5;
+  padding: 20px;
+  max-width: 400px;
+  width: 90%;
+}
+
+.option-btn {
+  width: 100%;
+  margin: 6px 0;
+}
+
+.option-btn.wrong {
+  background: #ff0033;
+  color: #fff;
+}
+
+.hint .card {
+  background: #111;
+}
+
+.success, .elimination {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.success.active,
+.elimination.active {
+  display: flex;
+}
+
+#volunteerscreen {
+  padding: 12px;
+  width: 80%;
+  max-width: 260px;
+  background: #000;
+  color: #00ffd5;
+  border: 2px solid #00ffd5;
+  margin-bottom: 10 px;
+}
+
+#volunteerError {
+  color: #ff0033;
+  font-size: 8px;
+}
+
+/* ===== ANSWER FEEDBACK ANIMATIONS ===== */
+
+/* WRONG ANSWER */
+.option.wrong {
+  background: #ff2e2e;
+  color: #fff;
+  animation: shake 0.4s;
+  box-shadow: 0 0 15px #ff2e2e;
+}
+
+/* RIGHT ANSWER */
+.option.correct {
+  background: #00cfff;
+  color: #000;
+  animation: pulse 0.6s;
+  box-shadow: 0 0 20px #00cfff;
+}
+
+/* SHAKE */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* PULSE */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>System Override</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS LINK -->
+  <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+
+<!-- ================= TEAM SELECTION ================= -->
+<div id="teamScreen" class="screen active">
+  <h1>SYSTEM OVERRIDE</h1>
+  <h3>Select Your Team</h3>
+
+  <div class="team-grid">
+    <button class="team-btn" data-team="1">Team 1</button>
+    <button class="team-btn" data-team="2">Team 2</button>
+    <button class="team-btn" data-team="3">Team 3</button>
+    <button class="team-btn" data-team="4">Team 4</button>
+    <button class="team-btn" data-team="5">Team 5</button>
+    <button class="team-btn" data-team="6">Team 6</button>
+    <button class="team-btn" data-team="7">Team 7</button>
+    <button class="team-btn" data-team="8">Team 8</button>
+  </div>
+</div>
+
+<!-- ================= VOLUNTEER AUTH ================= -->
+<div id="volunteerScreen" class="screen">
+  <h2>Authorized Access Only</h2>
+
+  <input
+    type="password"
+    id="volunteerInput"
+    placeholder="Enter Authorization Code"
+  />
+
+  <button id="verifyVolunteer">Verify</button>
+  <p id="volunteerError" class="error"></p>
+</div>
+
+<!-- ================= MAIN SYSTEM ================= -->
+<div id="systemScreen" class="screen">
+
+  <h2 id="teamName">TEAM</h2>
+
+  <div class="stats">
+    <span id="timer">Time: 0s</span>
+    <span id="attempts">Attempts Left: 4</span>
+    <span id="resets">Resets Used: 0/3</span>
+    <span>Benchmark: 180s</span>
+  </div>
+
+  <!-- MODULE PANEL -->
+  <div class="modules">
+    <button class="open-module">Module 1</button>
+    <button class="open-module">Module 2</button>
+    <button class="open-module">Module 3</button>
+    <button class="open-module">Module 4</button>
+    <button class="open-module">Module 5</button>
+  </div>
+
+  <!-- PASSWORD PANEL -->
+  <div class="password-panel">
+    <span class="digit">_</span>
+    <span class="digit">_</span>
+    <span class="digit">_</span>
+    <span class="digit">_</span>
+    <span class="digit">_</span>
+  </div>
+</div>
+
+<!-- ================= QUESTION OVERLAY ================= -->
+<div id="questionOverlay" class="overlay">
+  <div class="question-box">
+    <h3 id="questionTitle"></h3>
+    <p id="questionText"></p>
+
+    <div class="options">
+      <button class="option"></button>
+      <button class="option"></button>
+      <button class="option"></button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= SUCCESS ================= -->
+<div id="successScreen" class="screen">
+  <h1>ACCESS GRANTED</h1>
+  <p id="finalOutput"></p>
+</div>
+
+<!-- ================= ELIMINATION ================= -->
+<div id="eliminationScreen" class="screen">
+  <h1>ACCESS DENIED</h1>
+  <p>You have been eliminated.</p>
+</div>
+
+<!-- JS LINK (VERY IMPORTANT: LAST LINE) -->
+<script src="script1.js"></script>
+</body>
+</html>
